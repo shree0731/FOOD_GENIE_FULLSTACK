@@ -1,3 +1,8 @@
+const MODEL = "llama-3.1-8b-instant";
+const MAX_TOKENS = 900;
+const REQUEST_TIMEOUT_MS = 15000;
+const MAX_INGREDIENTS_LENGTH = 300;
+
 const SYSTEM_PROMPT = `You are a professional recipe developer. Given a list of ingredients someone has on hand, create ONE clear, cookable recipe.
 
 Rules:
@@ -17,20 +22,6 @@ Rules:
   "tip": "string, one short helpful tip or substitution idea"
 }`;
 
-const MAX_INGREDIENTS_LENGTH = 300;
-
 export const generateRecipe = async (req, res) => {
-  const { ingredients } = req.body ?? {};
-
-  if (typeof ingredients !== "string" || !ingredients.trim()) {
-    return res.status(400).json({ error: "Please enter at least one ingredient." });
-  }
-
-  if (!process.env.GROQ_API_KEY) {
-    return res.status(500).json({
-      error: "Server is missing GROQ_API_KEY. Add it to backend/.env and restart the server.",
-    });
-  }
-
-  res.json({ status: "ready" });
+  res.json({ model: MODEL });
 };
