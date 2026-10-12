@@ -6,6 +6,22 @@ function extractJson(raw) {
   return JSON.parse(cleaned.slice(start, end + 1));
 }
 
+function validateRecipeShape(recipe) {
+  const requiredStringFields = ["title", "description", "prepTime", "cookTime", "servings", "difficulty"];
+  for (const field of requiredStringFields) {
+    if (typeof recipe[field] !== "string" || !recipe[field].trim()) {
+      throw new Error(`Recipe is missing a valid "${field}"`);
+    }
+  }
+  if (!Array.isArray(recipe.ingredients) || recipe.ingredients.length === 0) {
+    throw new Error('Recipe is missing "ingredients"');
+  }
+  if (!Array.isArray(recipe.steps) || recipe.steps.length === 0) {
+    throw new Error('Recipe is missing "steps"');
+  }
+  return true;
+}
+
 export const generateRecipe = async (req, res) => {
-  res.json({ status: "json parser ready" });
+  res.json({ status: "validation ready" });
 };
