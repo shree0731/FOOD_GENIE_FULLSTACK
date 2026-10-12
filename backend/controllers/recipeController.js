@@ -22,6 +22,14 @@ function validateRecipeShape(recipe) {
   return true;
 }
 
+function withTimeout(promise, ms) {
+  let timer;
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => reject(new Error("TIMEOUT")), ms);
+  });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
+}
+
 export const generateRecipe = async (req, res) => {
-  res.json({ status: "validation ready" });
+  res.json({ status: "ready" });
 };
