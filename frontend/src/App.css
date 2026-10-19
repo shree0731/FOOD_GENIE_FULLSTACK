@@ -1,0 +1,67 @@
+.shell {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4rem;
+}
+
+.shell__header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--turmeric);
+  margin-bottom: 1rem;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--sage-dim);
+  opacity: 0.6;
+}
+
+.shell__title {
+  font-size: clamp(2.1rem, 5vw, 3.1rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+}
+
+.shell__title em {
+  font-style: italic;
+  color: var(--paprika-hot);
+}
+
+.shell__subtitle {
+  margin-top: 0.9rem;
+  color: var(--sage-dim);
+  font-size: 1.02rem;
+  max-width: 46ch;
+  margin-inline: auto;
+}
+
+.shell__footer {
+  text-align: center;
+  margin-top: 3.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+  color: var(--sage-dim);
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 480px) {
+  .shell {
+    padding: 2.25rem 1.1rem 3rem;
+  }
+}
