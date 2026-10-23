@@ -1,19 +1,82 @@
+import "./RecipeCard.css";
+
+const DIFFICULTY_ICON = {
+  Easy: "●",
+  Medium: "●●",
+  Hard: "●●●",
+};
+
 export default function RecipeCard({ recipe }) {
-  if (!recipe) return null;
+  const { title, description, prepTime, cookTime, servings, difficulty, ingredients, steps, tip } = recipe;
+
   return (
     <div className="recipe-card">
-      <h2>{recipe.title}</h2>
-      <p>{recipe.description}</p>
+      <div className="recipe-card__pin" aria-hidden="true" />
+
+      <h2 className="recipe-card__title">{title}</h2>
+      {description && <p className="recipe-card__description">{description}</p>}
+
       <div className="recipe-card__meta">
-        <span>⏱️ {recipe.prepTime} prep</span>
-        <span>🔥 {recipe.cookTime} cook</span>
-        <span>👥 {recipe.servings}</span>
-        <span>📊 {recipe.difficulty}</span>
+        {prepTime && (
+          <div className="meta-badge">
+            <span className="meta-badge__label">Prep</span>
+            <span className="meta-badge__value">{prepTime}</span>
+          </div>
+        )}
+        {cookTime && (
+          <div className="meta-badge">
+            <span className="meta-badge__label">Cook</span>
+            <span className="meta-badge__value">{cookTime}</span>
+          </div>
+        )}
+        {servings && (
+          <div className="meta-badge">
+            <span className="meta-badge__label">Serves</span>
+            <span className="meta-badge__value">{servings}</span>
+          </div>
+        )}
+        {difficulty && (
+          <div className="meta-badge">
+            <span className="meta-badge__label">Difficulty</span>
+            <span className="meta-badge__value meta-badge__value--dots">
+              {DIFFICULTY_ICON[difficulty] || difficulty}
+            </span>
+          </div>
+        )}
       </div>
-      <h3>Ingredients</h3>
-      <ul>{recipe.ingredients.map((ing, i) => <li key={i}>{ing}</li>)}</ul>
-      <h3>Instructions</h3>
-      <ol>{recipe.steps.map((st, i) => <li key={i}>{st}</li>)}</ol>
+
+      <div className="recipe-card__divider" />
+
+      <section className="recipe-card__section">
+        <h3 className="recipe-card__heading">Ingredients</h3>
+        <ul className="ingredient-list">
+          {ingredients.map((item, i) => (
+            <li key={i} className="ingredient-list__item">
+              <span className="ingredient-list__check" aria-hidden="true" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="recipe-card__section">
+        <h3 className="recipe-card__heading">Method</h3>
+        <ol className="step-list">
+          {steps.map((step, i) => (
+            <li key={i} className="step-list__item">
+              <span className="step-list__number">{i + 1}</span>
+              <span>{step}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {tip && (
+        <div className="recipe-card__tip">
+          <span className="recipe-card__tip-icon" aria-hidden="true">💡</span>
+          <p>{tip}</p>
+        </div>
+      )}
     </div>
   );
 }
