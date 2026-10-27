@@ -30,6 +30,12 @@ Rules:
   "tip": "string, one short helpful tip or substitution idea"
 }`;
 
+/**
+ * Extracts and parses a JSON object from raw LLM output text,
+ * stripping away markdown code block wrappers if present.
+ * @param {string} raw - Raw text output from LLM
+ * @returns {Object} Parsed recipe JSON object
+ */
 function extractJson(raw) {
   // Model may occasionally wrap output in ```json fences despite instructions.
   const cleaned = raw.replace(/```json|```/g, "").trim();
