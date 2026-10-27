@@ -88,7 +88,8 @@ export const generateRecipe = async (req, res) => {
     });
   }
 
-  const cleanIngredients = ingredients.trim().slice(0, MAX_INGREDIENTS_LENGTH);
+  // Normalize multi-whitespace and enforce maximum boundary
+  const cleanIngredients = ingredients.replace(/\s+/g, ' ').trim().slice(0, MAX_INGREDIENTS_LENGTH);
 
   try {
     const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
