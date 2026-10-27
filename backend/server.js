@@ -45,6 +45,14 @@ app.use((req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Backend running on port ${PORT}`);
 });
+
+// Graceful shutdown listeners
+const shutdown = () => {
+  console.log('\nGracefully stopping server...');
+  server.close(() => process.exit(0));
+};
+process.on('SIGINT', shutdown);
+process.on('SIGTERM', shutdown);
