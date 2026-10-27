@@ -1,4 +1,5 @@
 import "./App.css";
+import RecipeForm from "./Components/RecipeForm";
 
 function App() {
   return (
@@ -14,9 +15,7 @@ function App() {
         </p>
       </header>
 
-      <main>
-        <p>Kitchen workspace loading...</p>
-      </main>
+      <RecipeForm />
 
       <footer className="shell__footer">simmer · powered by groq</footer>
     </div>
