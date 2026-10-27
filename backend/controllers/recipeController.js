@@ -11,6 +11,7 @@ const MAX_TOKENS = 900;
 const REQUEST_TIMEOUT_MS = 15000;
 const MAX_INGREDIENTS_LENGTH = 300;
 
+// System instructions guiding the LLM to format recipes deterministically in strict JSON
 const SYSTEM_PROMPT = `You are a professional recipe developer. Given a list of ingredients someone has on hand, create ONE clear, cookable recipe.
 
 Rules:
