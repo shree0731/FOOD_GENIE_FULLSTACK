@@ -134,7 +134,7 @@ export const generateRecipe = async (req, res) => {
       return res.status(429).json({ error: "Too many requests right now. Please wait a moment and try again." });
     }
 
-    console.error("Recipe generation failed:", error.message);
+    console.error(`[${new Date().toISOString()}] Recipe generation failed:`, error.message);
     return res.status(500).json({
       error: "AI generation failed. Please try again.",
       details: error.message,
