@@ -1,5 +1,11 @@
 # Food Genie - Fullstack AI Recipe Generator 🍲
 
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite)](https://vitejs.dev/)
+[![Express](https://img.shields.io/badge/Express-5-000000?logo=express)](https://expressjs.com/)
+[![Groq](https://img.shields.io/badge/Groq-AI%20Powered-F55036)](https://groq.com/)
+
 Food Genie (Simmer) is a modern fullstack AI application that turns your leftover pantry ingredients into clear, chef-quality recipes complete with exact measurements, step-by-step directions, cooking times, and culinary tips.
 
 Powered by **Groq Cloud API (LLaMA 3.1 8B Instant)** for ultra-fast generation speeds.
