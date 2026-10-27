@@ -45,6 +45,12 @@ function extractJson(raw) {
   return JSON.parse(cleaned.slice(start, end + 1));
 }
 
+/**
+ * Validates that the recipe object conforms to the expected schema.
+ * @param {Object} recipe - Recipe object to validate
+ * @throws {Error} If any required field is missing or invalid
+ * @returns {boolean} True if recipe shape is valid
+ */
 function validateRecipeShape(recipe) {
   const requiredStringFields = ["title", "description", "prepTime", "cookTime", "servings", "difficulty"];
   for (const field of requiredStringFields) {
