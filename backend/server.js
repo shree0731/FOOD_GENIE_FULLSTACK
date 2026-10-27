@@ -11,7 +11,12 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/api/health", (req, res) => {
-  res.json({ status: "ok" });
+  res.json({
+    status: "ok",
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString(),
+    service: "Food Genie Backend API"
+  });
 });
 
 app.use("/api/recipe", recipeRoutes);
