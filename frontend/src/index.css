@@ -1,4 +1,9 @@
 :root {
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
   /* Palette — spice-tin, not the generic cream/terracotta AI look */
   --ink: #1b1512;
   --espresso: #241c15;
