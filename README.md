@@ -162,5 +162,13 @@ npm run dev
 
 ---
 
+## ❓ Troubleshooting & FAQs
+
+- **Error: `GROQ_API_KEY is not set`:** Ensure you have copied `.env.example` to `.env` inside `backend/` and populated your valid API key.
+- **Error: `429 Too Many Requests`:** The free Groq tier has per-minute token limits. Wait a few moments before submitting another request.
+- **Frontend cannot reach backend:** Ensure backend is running on `http://localhost:4000` or check `VITE_API_BASE_URL` in `frontend/.env`.
+
+---
+
 ## 📄 License
 ISC License. Built for Fullstack Internship Project.
