@@ -58,6 +58,16 @@ FOOD_GENIE_FULLSTACK/
 
 ---
 
+## 🔑 Environment Configuration
+
+| Variable | Service | Required | Description |
+|---|---|---|---|
+| `PORT` | Backend | No | Port on which the API runs (default: `4000`) |
+| `GROQ_API_KEY` | Backend | **Yes** | API key obtained from Groq Cloud Console |
+| `VITE_API_BASE_URL` | Frontend | No | Base endpoint for the backend API |
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
