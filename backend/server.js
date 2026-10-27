@@ -27,6 +27,14 @@ app.get("/api/health", (req, res) => {
 
 app.use("/api/recipe", recipeRoutes);
 
+// Handle malformed JSON body errors
+app.use((err, req, res, next) => {
+  if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
+    return res.status(400).json({ error: "Invalid JSON payload in request." });
+  }
+  next(err);
+});
+
 if (!process.env.GROQ_API_KEY) {
   console.warn("⚠️  GROQ_API_KEY is not set. Recipe generation will fail until it is configured in .env");
 }
