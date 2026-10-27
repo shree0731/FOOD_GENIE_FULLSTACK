@@ -39,6 +39,11 @@ if (!process.env.GROQ_API_KEY) {
   console.warn("⚠️  GROQ_API_KEY is not set. Recipe generation will fail until it is configured in .env");
 }
 
+// 404 Fallback for unhandled routes
+app.use((req, res) => {
+  res.status(404).json({ error: "Endpoint not found." });
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Backend running on port ${PORT}`);
