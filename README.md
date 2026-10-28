@@ -176,3 +176,5 @@ ISC License. Built for Fullstack Internship Project.
 <!-- commit: refactor(frontend): add JSDoc type definitions to recipeAPI service -->
 
 <!-- commit: fix(frontend): improve network failure error messages in recipeAPI -->
+
+<!-- commit: feat(frontend): add print recipe action to RecipeCard -->
