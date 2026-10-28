@@ -68,3 +68,17 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+
+.history-clear-btn {
+  background: transparent;
+  border: none;
+  color: inherit;
+  opacity: 0.6;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.history-clear-btn:hover {
+  opacity: 1;
+}
