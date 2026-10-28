@@ -84,3 +84,10 @@ a {
     transition-duration: 0.001ms !important;
   }
 }
+
+
+/* Accessibility: high-contrast focus rings */
+:focus-visible {
+  outline: 2px solid var(--accent, #e06c4b);
+  outline-offset: 2px;
+}
