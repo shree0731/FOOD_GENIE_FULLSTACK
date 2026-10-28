@@ -237,3 +237,10 @@
     color: #000 !important;
   }
 }
+
+
+.ingredient-checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
