@@ -8,6 +8,13 @@ const MESSAGES = [
   "Plating it up…",
 ];
 
+const TIPS = [
+  "Simmering ingredients...",
+  "Pairing flavors and spices...",
+  "Balancing cook times...",
+  "Plating the dish..."
+];
+
 export default function Loader() {
   const [messageIndex, setMessageIndex] = useState(0);
 
