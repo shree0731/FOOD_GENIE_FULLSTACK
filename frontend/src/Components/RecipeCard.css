@@ -226,3 +226,14 @@
 .recipe-copy-btn:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+
+@media print {
+  .recipe-actions, .recipe-copy-btn, .kitchen, .shell__footer {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}
