@@ -251,3 +251,12 @@
   opacity: 0.5;
   transition: all 0.2s;
 }
+
+
+.recipe-card__disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.65;
+  font-style: italic;
+  margin-top: 16px;
+  text-align: center;
+}
