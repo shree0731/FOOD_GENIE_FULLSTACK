@@ -196,3 +196,5 @@ ISC License. Built for Fullstack Internship Project.
 <!-- commit: style(frontend): highlight active and completed cooking steps -->
 
 <!-- commit: feat(frontend): display ingredient count badge in RecipeHistory items -->
+
+<!-- release: 1.1.0-verified -->
