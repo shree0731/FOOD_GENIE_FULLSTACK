@@ -116,3 +116,9 @@
     opacity: 0.4;
   }
 }
+
+
+/* Subtle glowing aura on active spinner */
+.loader__spinner {
+  filter: drop-shadow(0 0 8px rgba(224, 108, 75, 0.4));
+}
