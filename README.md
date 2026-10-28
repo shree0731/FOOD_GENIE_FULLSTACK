@@ -172,3 +172,5 @@ npm run dev
 
 ## 📄 License
 ISC License. Built for Fullstack Internship Project.
+
+<!-- commit: refactor(frontend): add JSDoc type definitions to recipeAPI service -->
