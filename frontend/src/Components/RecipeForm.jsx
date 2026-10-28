@@ -12,6 +12,8 @@ export default function RecipeForm() {
   const [error, setError] = useState("");
   const [history, setHistory] = useState([]);
 
+  const PRESETS = ["chicken, garlic, rice", "eggs, cheese, spinach", "tofu, soy sauce, broccoli", "pasta, tomato, basil"];
+
   const chips = useMemo(
     () =>
       ingredients
@@ -69,6 +71,17 @@ export default function RecipeForm() {
           <button type="button" className="input-card__clear" onClick={() => setIngredients("")} title="Clear text">
             ✕ Clear
           </button>
+        )}
+
+        {!ingredients && (
+          <div className="preset-row">
+            <span className="preset-label">Try:</span>
+            {PRESETS.map((p) => (
+              <button key={p} type="button" className="preset-tag" onClick={() => setIngredients(p)}>
+                {p}
+              </button>
+            ))}
+          </div>
         )}
 
         {chips.length > 0 && (
