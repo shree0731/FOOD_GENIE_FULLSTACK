@@ -99,6 +99,7 @@ export default function RecipeCard({ recipe }) {
           <p>{tip}</p>
         </div>
       )}
+      <footer className="recipe-card__disclaimer">💡 Nutritional values are estimates. Season and adjust to personal taste.</footer>
     </div>
   );
 }
