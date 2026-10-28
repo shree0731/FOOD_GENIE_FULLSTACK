@@ -77,7 +77,10 @@ export default function RecipeForm() {
         )}
 
         <div className="input-card__footer">
-          <span className="input-card__hint">Separate ingredients with commas</span>
+          <div className="input-card__hints">
+            <span className="input-card__hint">Separate ingredients with commas</span>
+            <span className="input-card__counter">{ingredients.length}/300</span>
+          </div>
           <button className="cook-button" onClick={handleGenerateRecipe} disabled={loading}>
             {loading ? "Cooking…" : "Cook something up"}
           </button>
