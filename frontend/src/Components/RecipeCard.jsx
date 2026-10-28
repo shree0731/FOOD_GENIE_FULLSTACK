@@ -11,6 +11,11 @@ import { useState } from "react";
 export default function RecipeCard({ recipe }) {
   const [copied, setCopied] = useState(false);
   const [checkedIngredients, setCheckedIngredients] = useState({});
+  const [doneSteps, setDoneSteps] = useState({});
+
+  const toggleStep = (idx) => {
+    setDoneSteps((prev) => ({ ...prev, [idx]: !prev[idx] }));
+  };
 
   const toggleIngredient = (idx) => {
     setCheckedIngredients((prev) => ({ ...prev, [idx]: !prev[idx] }));
