@@ -17,7 +17,7 @@ function App() {
 
       <RecipeForm />
 
-      <footer className="shell__footer">simmer · powered by groq</footer>
+      <footer className="shell__footer">© {new Date().getFullYear()} simmer · powered by groq</footer>
     </div>
   );
 }
