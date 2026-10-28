@@ -65,6 +65,11 @@ export default function RecipeForm() {
           rows={3}
           disabled={loading}
         />
+        {ingredients.length > 0 && !loading && (
+          <button type="button" className="input-card__clear" onClick={() => setIngredients("")} title="Clear text">
+            ✕ Clear
+          </button>
+        )}
 
         {chips.length > 0 && (
           <div className="chip-row" aria-label="Parsed ingredients">
