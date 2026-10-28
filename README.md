@@ -118,6 +118,18 @@ npm run dev
 
 ---
 
+## 📡 API Endpoints & Status Codes
+
+| Status Code | Meaning | Reason |
+|---|---|---|
+| `200 OK` | Success | Valid recipe generated successfully |
+| `400 Bad Request` | Client Error | Empty ingredients or invalid payload |
+| `429 Rate Limit` | Throttled | Groq AI quota exceeded temporarily |
+| `500 Server Error` | Config Error | Missing `GROQ_API_KEY` in environment |
+| `504 Gateway Timeout` | Timeout | Request exceeded 15s deadline |
+
+---
+
 ## 📡 API Endpoints
 
 | Method | Endpoint | Description |
