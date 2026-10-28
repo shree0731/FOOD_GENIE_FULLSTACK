@@ -121,3 +121,15 @@
     width: 100%;
   }
 }
+
+
+.input-card__hints {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.input-card__counter {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
