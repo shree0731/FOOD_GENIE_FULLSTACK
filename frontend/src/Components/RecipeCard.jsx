@@ -6,7 +6,19 @@ const DIFFICULTY_ICON = {
   Hard: "●●●",
 };
 
+import { useState } from "react";
+
 export default function RecipeCard({ recipe }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    if (!recipe) return;
+    const text = `${recipe.title}\n\n${recipe.description}\n\nIngredients:\n${recipe.ingredients.join("\n")}\n\nSteps:\n${recipe.steps.join("\n")}`;
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
   const { title, description, prepTime, cookTime, servings, difficulty, ingredients, steps, tip } = recipe;
 
   return (
