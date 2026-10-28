@@ -1,6 +1,7 @@
 import "./RecipeHistory.css";
 
-export default function RecipeHistory({ history, onSelect }) {
+export default function RecipeHistory({ history, onSelect, onClear }) {
+  if (!history?.length) return null;
   if (history.length === 0) return null;
 
   return (
