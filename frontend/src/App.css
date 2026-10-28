@@ -65,3 +65,9 @@
     padding: 2.25rem 1.1rem 3rem;
   }
 }
+
+
+.shell__title em {
+  font-style: italic;
+  color: var(--accent, #e06c4b);
+}
