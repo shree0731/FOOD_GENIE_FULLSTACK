@@ -106,7 +106,7 @@ export default function RecipeForm() {
       </div>
 
       {error && (
-        <div className="error-banner" role="alert">
+        <div className="error-banner" role="alert" aria-live="assertive">
           <span>⚠️</span> {error}
         </div>
       )}
