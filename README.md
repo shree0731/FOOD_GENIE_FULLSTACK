@@ -182,3 +182,5 @@ ISC License. Built for Fullstack Internship Project.
 <!-- commit: feat(frontend): connect checklist click handler in RecipeCard ingredient list -->
 
 <!-- commit: style(frontend): highlight active and completed cooking steps -->
+
+<!-- commit: feat(frontend): display ingredient count badge in RecipeHistory items -->
