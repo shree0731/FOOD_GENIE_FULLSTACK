@@ -133,3 +133,20 @@
   font-size: 0.8rem;
   opacity: 0.6;
 }
+
+
+.input-card__clear {
+  background: transparent;
+  border: none;
+  color: inherit;
+  opacity: 0.6;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  align-self: flex-end;
+  transition: opacity 0.2s;
+}
+
+.input-card__clear:hover {
+  opacity: 1;
+}
