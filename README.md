@@ -178,3 +178,5 @@ ISC License. Built for Fullstack Internship Project.
 <!-- commit: fix(frontend): improve network failure error messages in recipeAPI -->
 
 <!-- commit: feat(frontend): add print recipe action to RecipeCard -->
+
+<!-- commit: feat(frontend): connect checklist click handler in RecipeCard ingredient list -->
