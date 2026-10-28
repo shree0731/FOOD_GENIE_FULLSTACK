@@ -82,3 +82,10 @@
 .history-clear-btn:hover {
   opacity: 1;
 }
+
+
+.history-chip__count {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-left: 4px;
+}
