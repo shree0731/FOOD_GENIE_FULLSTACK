@@ -26,5 +26,6 @@ export const generateRecipeAPI = async (ingredients) => {
     throw new Error(data?.error || "Something went wrong. Please try again.");
   }
 
+  clearTimeout(timeoutId);
   return data;
 };
